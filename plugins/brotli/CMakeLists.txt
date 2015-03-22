@@ -4,6 +4,7 @@ set (brotli_sources
   brotli/dec/decode.c
   brotli/dec/huffman.c
   brotli/dec/safe_malloc.c
+  brotli/dec/state.c
   brotli/dec/streams.c
   brotli/enc/backward_references.cc
   brotli/enc/block_splitter.cc
@@ -11,8 +12,7 @@ set (brotli_sources
   brotli/enc/encode.cc
   brotli/enc/entropy_encode.cc
   brotli/enc/histogram.cc
-  brotli/enc/literal_cost.cc
-  brotli/tools/bro.cc)
+  brotli/enc/literal_cost.cc)
 
 if (NOT "${DISABLE_BROTLI}" STREQUAL "yes")
   squash_plugin_add (brotli brotli_sources)
